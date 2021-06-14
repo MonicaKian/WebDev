@@ -17,6 +17,9 @@ namespace WebDev.Mangement
                              orderby d.name ascending
                              select d
                             ).ToList();
+
+                GVDrinks.DataSource = items;
+                GVDrinks.DataBind();
             }
         }
     }
