@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebDev.Models;
+
 namespace WebDev.Mangement
 {
     public partial class AllDrinks : System.Web.UI.Page
@@ -20,6 +21,7 @@ namespace WebDev.Mangement
 
                 GVDrinks.DataSource = items;
                 GVDrinks.DataBind();
+                
             }
         }
     }
