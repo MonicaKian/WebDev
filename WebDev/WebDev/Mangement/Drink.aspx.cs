@@ -30,7 +30,7 @@ namespace WebDev.Mangement
                        where d.drinkId == id.Value
                        select d).FirstOrDefault();
             }        
-            return null;
+            return dri;
         }
 
         // The id parameter name should match the DataKeyNames value set on the control

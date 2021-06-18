@@ -12,7 +12,7 @@
                     ItemType="WebDev.Models.Drink" DataKeyNames="drinkId" SelectMethod="FVDrinkItem_GetItem"
                     UpdateMethod="FVDrinkItem_UpdateItem" InsertMethod="FVDrinkItem_InsertItem" DeleteMethod="FVDrinkItem_DeleteItem" runat="server">
                     <ItemTemplate>
-                       
+                        <legend>Item #:<%# Item.drinkId.ToString("D4") %></legend>
                         <div class="form-group">
                             <label>Item:</label><%# Item.name %>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="form-group">
                             <asp:Button runat="server" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
                             <asp:Button runat="server" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
-                            <a href="AllProducts.aspx" class="btn btn-secondary">Back To Products</a>
+                            <a href="AllDrinks.aspx" class="btn btn-secondary">Back To Drinks</a>
                         </div>
 
                     </ItemTemplate>
