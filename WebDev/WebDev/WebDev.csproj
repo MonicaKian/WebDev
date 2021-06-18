@@ -139,6 +139,13 @@
     <Compile Include="Mangement\AllDrinks.aspx.designer.cs">
       <DependentUpon>AllDrinks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mangement\Drink.aspx.cs">
+      <DependentUpon>Drink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mangement\Drink.aspx.designer.cs">
+      <DependentUpon>Drink.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Drink.cs">
       <DependentUpon>WebDBModel.tt</DependentUpon>
     </Compile>
@@ -176,6 +183,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Mangement\AllDrinks.aspx" />
+    <Content Include="Mangement\Drink.aspx" />
     <Content Include="Models\WebDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>WebDBModel.Context.cs</LastGenOutput>
