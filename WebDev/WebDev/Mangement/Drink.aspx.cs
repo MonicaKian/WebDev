@@ -20,8 +20,16 @@ namespace WebDev.Mangement
 
         // The id parameter should match the DataKeyNames value set on the control
         // or be decorated with a value provider attribute, e.g. [QueryString]int id
-        public WebDev.Models.Drink FVDrinkItem_GetItem(int id)
+        public WebDev.Models.Drink FVDrinkItem_GetItem([QueryString]int? id)
         {
+            Models.Drink dri = null;
+            if (id.HasValue)
+            {
+               // dri = db.Drinks.Find(id.Value);
+                dri = (from d in db.Drinks
+                       where d.drinkId == id.Value
+                       select d).FirstOrDefault();
+            }        
             return null;
         }
 

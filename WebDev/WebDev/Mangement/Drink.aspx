@@ -7,19 +7,35 @@
         <div class="col-8">
             <h2 class="text-center">Selected Drink</h2>
             <fieldset>
-                
+
                 <asp:FormView ID="FVDrinkItem" RenderOuterTable="false"
                     ItemType="WebDev.Models.Drink" DataKeyNames="drinkId" SelectMethod="FVDrinkItem_GetItem"
-                    UpdateMethod="FVDrinkItem_UpdateItem" InsertMethod="FVDrinkItem_InsertItem" DeleteMethod="FVDrinkItem_DeleteItem"
-                    >
+                    UpdateMethod="FVDrinkItem_UpdateItem" InsertMethod="FVDrinkItem_InsertItem" DeleteMethod="FVDrinkItem_DeleteItem" runat="server">
                     <ItemTemplate>
+                       
+                        <div class="form-group">
+                            <label>Item:</label><%# Item.name %>
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label><%# Item.description %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Image:</label><img src="<%# Item.image %>" alt="<%# Item.name %>" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <asp:Button runat="server" CommandName="Delete" CssClass="btn btn-danger" Text="Delete" />
+                            <asp:Button runat="server" CommandName="Edit" CssClass="btn btn-primary" Text="Edit" />
+                            <a href="AllProducts.aspx" class="btn btn-secondary">Back To Products</a>
+                        </div>
 
                     </ItemTemplate>
                     <InsertItemTemplate></InsertItemTemplate>
                     <EditItemTemplate></EditItemTemplate>
                     <EmptyDataTemplate></EmptyDataTemplate>
                 </asp:FormView>
-                
+
             </fieldset>
         </div>
     </div>

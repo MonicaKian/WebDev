@@ -6,7 +6,7 @@
         <Columns>
             <asp:TemplateField HeaderText="DrinkId">
                 <ItemTemplate>
-                    <a href="AllDrinks.aspx?ID=<%# Item.drinkId %>" target="_blank">
+                    <a href="Drink.aspx?ID=<%# Item.drinkId %>">
                         <%# Item.drinkId.ToString() %>
                     </a>
                 </ItemTemplate>
