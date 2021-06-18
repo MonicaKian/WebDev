@@ -9,7 +9,9 @@
             <fieldset>
                 
                 <asp:FormView ID="FVDrinkItem" RenderOuterTable="false"
-                    ItemType="WebDev.Models.Drink" DataKeyNames="drinkId" SelectMethod="FVDrinkItem_GetItem">
+                    ItemType="WebDev.Models.Drink" DataKeyNames="drinkId" SelectMethod="FVDrinkItem_GetItem"
+                    UpdateMethod="FVDrinkItem_UpdateItem" InsertMethod="FVDrinkItem_InsertItem" DeleteMethod="FVDrinkItem_DeleteItem"
+                    >
                     <ItemTemplate>
 
                     </ItemTemplate>
