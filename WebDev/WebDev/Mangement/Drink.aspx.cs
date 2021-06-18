@@ -4,11 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.ModelBinding;
 
 namespace WebDev.Mangement
 {
     public partial class Drink : System.Web.UI.Page
     {
+
+        Models.DrinksEntities db = new Models.DrinksEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
