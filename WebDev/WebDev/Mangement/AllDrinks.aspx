@@ -27,7 +27,9 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Image">
                 <ItemTemplate>
-                    <%# Item.image %>    
+                    <a href="<%# Item.image %>">
+                    <%# Item.image %> 
+                    </a>
                 </ItemTemplate>
 
             </asp:TemplateField>
